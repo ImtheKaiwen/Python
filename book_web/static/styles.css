@@ -1,0 +1,108 @@
+/* Genel stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Başlık */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #4a4a8a;
+}
+
+/* Form stili */
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4a4a8a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #36366a;
+}
+
+/* Kitap kartları */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #4a4a8a;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #4a4a8a;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card a:hover {
+    background-color: #36366a;
+}
+
+/* Detay sayfası */
+.detail-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.detail-container h1 {
+    color: #4a4a8a;
+}
+
+.detail-container a {
+    text-decoration: none;
+    color: white;
+    background-color: #4a4a8a;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.detail-container a:hover {
+    background-color: #36366a;
+}

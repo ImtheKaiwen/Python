@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitaplar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Kitap Yönetim Sistemi</h1>
+    
+    <form method="get" action="/">
+        <input type="text" name="query" placeholder="Başlık veya yazar ara">
+        <select name="category">
+            <option value="">Kategori seç</option>
+            <option value="Roman">Roman</option>
+            <option value="Distopya">Distopya</option>
+            <option value="Felsefi Roman">Felsefi Roman</option>
+        </select>
+        <button type="submit">Ara</button>
+    </form>
+
+    <div class="card-container">
+        {% for book in books %}
+        <div class="card">
+            <h3>{{ book.title }}</h3>
+            <p><strong>Yazar:</strong> {{ book.author }}</p>
+            <p><strong>Kategori:</strong> {{ book.category }}</p>
+            <p><strong>Yıl:</strong> {{ book.year }}</p>
+            <a href="{{ url_for('book_detail', book_id=book.id) }}">Detayları Gör</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
