@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Proje Yükle</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Yeni Proje Yükle</h1>
+        <a href="{{ url_for('index') }}">Ana Sayfaya Dön</a>
+    </header>
+
+    <form action="{{ url_for('upload_project') }}" method="POST" enctype="multipart/form-data">
+        <label for="title">Proje Başlığı:</label>
+        <input type="text" name="title" required>
+
+        <label for="description">Proje Açıklaması:</label>
+        <textarea name="description" required></textarea>
+
+        <label for="files">Dosyalar:</label>
+        <input type="file" name="files" multiple required>
+
+        <button type="submit">Yükle</button>
+    </form>
+</body>
+</html>
